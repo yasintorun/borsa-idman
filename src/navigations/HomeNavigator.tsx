@@ -1,16 +1,22 @@
+import { createDrawerNavigator, DrawerScreenProps } from '@react-navigation/drawer';
+import { LandingScreen } from '@screens';
 import * as React from 'react';
-import { View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import SelectAccount from '../screens/Accounts/SelectAccount';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { ROUTES } from 'src/constants';
 
-const Drawer = createDrawerNavigator();
+export type DrawerNavParamList = {
+  [ROUTES.LANDING]: {
+    id: number;
+  };
+};
+
+export type ScreenProps<T extends ROUTES> = DrawerScreenProps<DrawerNavParamList, T>
+
+const Drawer = createDrawerNavigator<DrawerNavParamList>();
 
 const HomeNavigator = () => {
   return (
     <Drawer.Navigator screenOptions={{headerShown: false}}>
-      <Drawer.Screen name="SelectAccount" component={SelectAccount} />
+      <Drawer.Screen name={ROUTES.LANDING} component={LandingScreen} />
     </Drawer.Navigator>
   );
 }
