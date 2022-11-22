@@ -6,14 +6,15 @@ module.exports = {
       "module-resolver",
       {
         alias: {
-          // This needs to be mirrored in tsconfig.json
           "@navigations": "./src/navigations",
-          "@components": "./src/components/*",
+          "@components/UI": "./src/components/UI",
+          "@components": "./src/components",
           "@models": "./src/models",
           "@screens": "./src/screens",
           "@utils": "./src/utils",
           "@hooks": "./src/hooks",
-          src: "./src",
+          "@assets/*": "./src/assets/*"
+          // src: "./src",
         },
       },
     ],

@@ -12,11 +12,13 @@
     "baseUrl": ".",
     "paths": {
       "@navigations": ["src/navigations"],
+      "@components/UI": ["src/components/UI"],
       "@components": ["src/components"],
       "@screens": ["src/screens"],
       "@utils": ["src/utils"],
-      "@hooks": ["src/hooks"],
+      "@hooks": ["src/hooks"], 
       "@models": ["src/models"],
+      "@assets/*": ["src/models/*"],
     },
   },
   "include": ["."]
