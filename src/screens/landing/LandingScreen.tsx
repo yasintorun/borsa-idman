@@ -2,7 +2,7 @@ import { IdmanButton } from '@components/UI'
 import { ScreenProps } from '@navigations'
 import React from 'react'
 import { Text, View } from 'react-native'
-import { COLORS, ROUTES } from '@utils'
+import { COLORS, PRESENTATION_ROUTES, ROUTES } from '@utils'
 import styled from 'styled-components/native'
 import { IdmanLogo } from '@components'
 import { fonts } from '@utils'
@@ -21,7 +21,7 @@ const StyledText = styled.Text`
   text-align: center;
 `
 
-export const LandingScreen = (props: ScreenProps<ROUTES.LANDING>) => {
+export const LandingScreen = (props: ScreenProps<PRESENTATION_ROUTES.LANDING>) => {
   return (
     <StyledRoot>
       <View>
