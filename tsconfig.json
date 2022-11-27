@@ -18,7 +18,9 @@
       "@utils": ["src/utils"],
       "@hooks": ["src/hooks"], 
       "@models": ["src/models"],
-      "@assets/*": ["src/models/*"],
+      // "@assets/*": ["src/models/*"],
+      "@store": ["src/store"],
+      "@services": ["src/services"],
     },
   },
   "include": ["."]

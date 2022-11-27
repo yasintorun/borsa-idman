@@ -1,13 +1,19 @@
+import { store } from '@store';
 import { COLORS } from '@utils';
 import React from 'react';
-import { SafeAreaView } from 'react-native';
+import { StatusBar } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { AppNavigator } from './src/navigations/AppNavigator';
+import { Provider as StoreProvider } from 'react-redux';
+import Launch from './Launch';
+
 const App = () => {
   return (
-    <SafeAreaProvider style={{backgroundColor: COLORS.background}}>
-      <AppNavigator />
-    </SafeAreaProvider>
+    <StoreProvider store={store}>
+      <SafeAreaProvider style={{ flex: 1, backgroundColor: COLORS.background }}>
+        <StatusBar backgroundColor={COLORS.background}/>
+        <Launch />
+      </SafeAreaProvider>
+    </StoreProvider>
   );
 };
 

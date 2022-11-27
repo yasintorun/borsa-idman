@@ -1,9 +1,11 @@
 import { IdmanLogo } from '@components'
 import { IdmanButton } from '@components/UI'
+import { donePresentation } from '@store'
 import { PRESENTATION_ROUTES } from '@utils'
 import React from 'react'
-import { View, StyleSheet, Text } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import Animated from 'react-native-reanimated'
+import { useDispatch } from 'react-redux'
 import { ScreenProps } from 'src/types'
 import styled from 'styled-components/native'
 
@@ -15,6 +17,11 @@ const StyledRoot = styled.View`
 `
 
 export const Presentation2Screen = (props: ScreenProps<PRESENTATION_ROUTES.PRESENTATION2>) => {
+    const dispatch = useDispatch()
+    const handleSignin = async () => {
+        dispatch(donePresentation(true))
+    }
+
     return (
         <StyledRoot>
             <IdmanLogo />
@@ -27,7 +34,7 @@ export const Presentation2Screen = (props: ScreenProps<PRESENTATION_ROUTES.PRESE
                     İstediğin borsa birimlerine dilediğin kadar yatırım yap.
                 </Text>
             </View>
-            <IdmanButton text='Giriş Yap' size={20} />
+            <IdmanButton text='Giriş Yap' size={20} onPress={handleSignin} />
         </StyledRoot>
     )
 }

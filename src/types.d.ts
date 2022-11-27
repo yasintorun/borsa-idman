@@ -1,6 +1,6 @@
 import { DrawerScreenProps } from "@react-navigation/drawer";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { PRESENTATION_ROUTES } from "./utils/constants";
+import { PRESENTATION_ROUTES, ROUTES } from "./utils/constants";
 
 declare module '*.png' {
     const src: string
@@ -8,10 +8,9 @@ declare module '*.png' {
 }
 
 declare type ScreenParamList = {
-    [key in PRESENTATION_ROUTES]:  undefined;
-    [key in ROUTES]: undefined;
+    [key in ROUTES | PRESENTATION_ROUTES]: undefined;
 };
 
-declare type ScreenProps<T extends ROUTES> = NativeStackScreenProps<ScreenParamList, T>
+declare type ScreenProps<T extends ROUTES | PRESENTATION_ROUTES> = NativeStackScreenProps<ScreenParamList, T>
 // export type KodDrawerScreenProps<T extends ROUTES> = DrawerScreenProps<DrawerNavParamList, T>
 

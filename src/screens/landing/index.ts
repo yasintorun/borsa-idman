@@ -1,5 +1,3 @@
 export {LandingScreen} from './LandingScreen'
 export {PresentationScreen} from './PresentationScreen'
 export {Presentation2Screen} from './Presentation2Screen'
-export type {PresentationScreenProps} from './PresentationScreen'
-export type {Presentation2ScreenProps} from './Presentation2Screen'
