@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator<ScreenParamList>();
 
 const PresentationNavigator = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name={PRESENTATION_ROUTES.LANDING} component={LandingScreen} />
         <Stack.Screen name={PRESENTATION_ROUTES.PRESENTATION} component={PresentationScreen} />
         <Stack.Screen name={PRESENTATION_ROUTES.PRESENTATION2} component={Presentation2Screen} />

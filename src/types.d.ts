@@ -1,4 +1,5 @@
 import { DrawerScreenProps } from "@react-navigation/drawer";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { PRESENTATION_ROUTES } from "./utils/constants";
 
 declare module '*.png' {

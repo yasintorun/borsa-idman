@@ -15,6 +15,7 @@ const StyledRoot = styled.View`
 `
 
 export const PresentationScreen = (props: ScreenProps<PRESENTATION_ROUTES.PRESENTATION>) => {
+    const {navigation} = props
     return (
         <StyledRoot>
             <IdmanLogo />
@@ -27,7 +28,7 @@ export const PresentationScreen = (props: ScreenProps<PRESENTATION_ROUTES.PRESEN
                     para üzerinden kendinizi sınayın.
                 </Text>
             </View>
-            <IdmanButton text='Sonraki' size={20} />
+            <IdmanButton text='Sonraki' size={20} onPress={() => navigation.navigate(PRESENTATION_ROUTES.PRESENTATION2)} />
         </StyledRoot>
     )
 }

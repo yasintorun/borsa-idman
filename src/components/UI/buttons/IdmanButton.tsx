@@ -26,12 +26,13 @@ export type IdmanButtonProps = {
     color?: keyof typeof COLORS;
     text: string;
     size?: number;
+    onPress?(): void;
 }
 
 export const IdmanButton = (props: IdmanButtonProps) => {
-    const { color, text, size } = props
+    const { color, text, size, onPress } = props
     return (
-        <StyledButtonRoot color={color}>
+        <StyledButtonRoot color={color} onPress={onPress}>
             <StyledText size={size}>{text}</StyledText>
         </StyledButtonRoot>
     )
