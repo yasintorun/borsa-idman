@@ -59,31 +59,34 @@ const StyledTitle = styled.Text`
 `
 
 
-export const SignupScreen = (props: ScreenProps<ROUTES.SIGNUP>) => {
-  const {navigation} = props
-  return (
-    <StyledRoot>
-      <IdmanLogo />
-      <StyledContent>
-        <StyledTitle>Kayıt Ol</StyledTitle>
-        <StyledForm>
-          <Input icon={{ name: "user" }} placeholder='Kullanıcı Adı' autoComplete="username" />
-          <Input icon={{ family: "MaterialCommunity", name: "key" }} placeholder='Şifre' autoComplete='password' />
-          <IdmanButton text='Üye Ol' style={{ marginTop: 30 }} />
-          <StyledNotAccount>
-            <StyledMutedText>
-              Hesabın var mı?
-            </StyledMutedText>
-            <TouchableOpacity onPress={() => navigation.navigate(ROUTES.SIGNIN)}>
-              <StyledSignupText>Hemen giriş yap</StyledSignupText>
-            </TouchableOpacity>
-          </StyledNotAccount>
-          {/* <StyledInput style={{color: "white", }} cursorColor={COLORS.primary} placeholderTextColor="#f2f2f2" placeholder='Kullanıcı Adı' autoComplete="username" /> */}
-          {/* <StyledInput style={{color: "white", }} cursorColor={COLORS.primary} placeholderTextColor="#f2f2f2" placeholder='Şifre' autoComplete='password' /> */}
-        </StyledForm>
-      </StyledContent>
-    </StyledRoot>
-  )
+export const SigninScreen = (props: ScreenProps<ROUTES.SIGNIN>) => {
+    const { navigation } = props
+    return (
+        <StyledRoot>
+            <IdmanLogo />
+            <StyledContent>
+                <StyledTitle>Giriş Yap</StyledTitle>
+                <StyledForm>
+                    <Input icon={{ name: "user" }} placeholder='Kullanıcı Adı' autoComplete="username" />
+                    <Input icon={{ family: "MaterialCommunity", name: "key" }} placeholder='Şifre' autoComplete='password' />
+                    <StyledRightAligment>
+                        <TouchableOpacity>
+                            <StyledForgottonPwdText>Şifremi Unuttum</StyledForgottonPwdText>
+                        </TouchableOpacity>
+                    </StyledRightAligment>
+                    <IdmanButton text='Giriş Yap' />
+                    <StyledNotAccount>
+                        <StyledMutedText>
+                            Hesabın yok mu?
+                        </StyledMutedText>
+                        <TouchableOpacity onPress={() => navigation.navigate(ROUTES.SIGNUP)}>
+                            <StyledSignupText>Hemen Kayıt ol</StyledSignupText>
+                        </TouchableOpacity>
+                    </StyledNotAccount>
+                </StyledForm>
+            </StyledContent>
+        </StyledRoot>
+    )
 }
 
 const styles = StyleSheet.create({})

@@ -6,4 +6,7 @@ export enum COLORS {
     opacity200 = "#FFFFFF20",
     opacity300 = "#FFFFFF30", 
     opacity400 = "#FFFFFF40",
+    opacity500 = "#FFFFFFa1",
+    opacity600 = "#FFFFFF99",
+    opacity900 = "#FFFFFFec",
 }
