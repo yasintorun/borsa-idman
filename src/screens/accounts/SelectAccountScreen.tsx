@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const SelectAccount = () => {
+export const SelectAccountScreen = () => {
   return (
     <View style={styles.root}>
       <View style={styles.card}>
@@ -11,14 +11,12 @@ const SelectAccount = () => {
   )
 }
 
-export default SelectAccount
 
 const styles = StyleSheet.create({
   root: {
     justifyContent: "center",
     alignItems: "center",
     height: "100%",
-    backgroundColor: "#fff"
   },
   card: {
     backgroundColor: "#F9A643",

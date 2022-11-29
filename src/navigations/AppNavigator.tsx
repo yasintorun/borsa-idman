@@ -19,13 +19,13 @@ export const AppNavigator = (): React.ReactElement => {
 
     return (
         <NavigationContainer theme={navigatorTheme}>
-            {isPresentationDone ? (
+            {/* {isPresentationDone ? (
                 <AuthNavigator />
             ) : (
                 <PresentationNavigator />
-            )}
+            )} */}
             {/* <PresentationNavigator /> */}
-            {/* <HomeNavigator /> */}
+            <HomeNavigator />
         </NavigationContainer>
     )
 };

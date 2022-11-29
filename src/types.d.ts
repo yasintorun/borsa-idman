@@ -1,4 +1,5 @@
 import { DrawerScreenProps } from "@react-navigation/drawer";
+import { NavigationProp } from "@react-navigation/native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { PRESENTATION_ROUTES, ROUTES } from "./utils/constants";
 
@@ -14,3 +15,4 @@ declare type ScreenParamList = {
 declare type ScreenProps<T extends ROUTES | PRESENTATION_ROUTES> = NativeStackScreenProps<ScreenParamList, T>
 // export type KodDrawerScreenProps<T extends ROUTES> = DrawerScreenProps<DrawerNavParamList, T>
 
+declare type ImNavigationDrawerProp = NavigationProp<ScreenParamList, keyof ScreenParamList, string>
