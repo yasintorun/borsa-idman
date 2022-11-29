@@ -20,7 +20,9 @@ export const MainNavigator = () => {
                 backgroundColor: COLORS.background,
             },
             tabBarIndicatorStyle: {
-                backgroundColor: COLORS.opacity300
+                backgroundColor: COLORS.primary,
+                width: "25%",
+                marginLeft: "10%"
             },
             tabBarLabelStyle: {
                 color: "#fff"
