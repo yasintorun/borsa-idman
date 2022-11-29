@@ -27,7 +27,7 @@ color: ${COLORS.opacity900}
 export const IdmanHeader = (props: DrawerHeaderProps) => {
   return (
     <StyledRoot>
-      <Icon family='MaterialCommunity' name='menu' size={32} color={COLORS.opacity900} onPress={() => props.navigation.toggleDrawer()}/>
+      <Icon family='MaterialCommunity' name='menu' size={32} color={COLORS.opacity900} onPress={() => props.navigation.openDrawer()}/>
       <StyledLogo>
         <StyledLogoImage  source={require("../../assets/images/logo.png")} style={{height: 32, width: 32}} resizeMode="contain"/>
         <StyledLogoText>Borsa Idman</StyledLogoText>
