@@ -1,9 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { ROUTES } from '@utils'
-import { ScreenParamList } from 'src/types'
 import { SigninScreen, SignupScreen } from '@screens'
+import { ROUTES } from '@utils'
+import React from 'react'
+import { StyleSheet } from 'react-native'
+import { ScreenParamList } from 'src/types'
 
 const Stack = createNativeStackNavigator<ScreenParamList>()
 

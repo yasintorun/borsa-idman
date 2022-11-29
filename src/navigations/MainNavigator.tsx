@@ -1,16 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { createMaterialTopTabNavigator, MaterialTopTabBarProps } from '@react-navigation/material-top-tabs';
-import { SelectAccountScreen, MarketListScreen } from '@screens';
-import { COLORS } from '@utils';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { COLORS, TAB_ROUTES } from '@utils';
+import React from 'react';
+import { AccountNavigator } from './AccountNavigator';
+import { MarketNavigator } from './MarketNavigator';
 
 const Tab = createMaterialTopTabNavigator();
-
-const T = (props: MaterialTopTabBarProps) => {
-    // console.log(props)
-    console.log(props.state.routeNames)
-    return <Text>Tsasd</Text>
-}
 
 export const MainNavigator = () => {
   return (
@@ -29,8 +23,8 @@ export const MainNavigator = () => {
             }
         }}
     >
-        <Tab.Screen name='Account' component={SelectAccountScreen} />
-        <Tab.Screen name='Exchange' component={MarketListScreen} />
+        <Tab.Screen name={TAB_ROUTES.ACCOUNT} component={AccountNavigator} options={{tabBarLabel: "Hesap"}} />
+        <Tab.Screen name={TAB_ROUTES.MARKET} component={MarketNavigator} options={{tabBarLabel: "Market"}} />
     </Tab.Navigator>
   )
 }

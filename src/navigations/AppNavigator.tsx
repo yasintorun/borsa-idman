@@ -1,10 +1,8 @@
-import React from 'react';
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
-import HomeNavigator from './HomeNavigator';
-import PresentationNavigator from './PresentationNavigator';
-import { useSelector } from 'react-redux';
 import { RootState } from '@store';
-import AuthNavigator from './AuthNavigator';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import HomeNavigator from './HomeNavigator';
 
 const navigatorTheme = {
     ...DefaultTheme,

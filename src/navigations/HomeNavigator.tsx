@@ -1,6 +1,5 @@
 import { IdmanDrawer, IdmanHeader } from '@components';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { SelectAccountScreen } from '@screens';
 import * as React from 'react';
 import { MainNavigator } from './MainNavigator';
 
