@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components/native'
 import { IdmanButton } from '@components/UI'
 import { Account } from '@models'
-import { AccountCard } from '@components'
+import { AccountCard, CreateAccountButton } from '@components'
 
 const StyledRoot = styled.View`
   flex: 1;
@@ -44,7 +44,7 @@ export const AccountListScreen = () => {
 
   return (
     <StyledRoot>
-      <IdmanButton text='Yeni Hesap Oluştur' />
+      <CreateAccountButton />
       <FlatList
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
