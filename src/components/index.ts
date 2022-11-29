@@ -4,3 +4,4 @@ export {IdmanLogo} from './logos/IdmanLogo'
 
 export * from './drawers'
 export * from './headers'
+export * from './account'
