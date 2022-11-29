@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createMaterialTopTabNavigator, MaterialTopTabBarProps } from '@react-navigation/material-top-tabs';
-import { SelectAccountScreen, ExchangeListScreen } from '@screens';
+import { SelectAccountScreen, MarketListScreen } from '@screens';
 import { COLORS } from '@utils';
 
 const Tab = createMaterialTopTabNavigator();
@@ -30,7 +30,7 @@ export const MainNavigator = () => {
         }}
     >
         <Tab.Screen name='Account' component={SelectAccountScreen} />
-        <Tab.Screen name='Exchange' component={ExchangeListScreen} />
+        <Tab.Screen name='Exchange' component={MarketListScreen} />
     </Tab.Navigator>
   )
 }

@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export const ExchangeListScreen = () => {
+export const MarketListScreen = () => {
   return (
     <View>
       <Text>ExchangeListScreen</Text>

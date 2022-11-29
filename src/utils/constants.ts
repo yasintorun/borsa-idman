@@ -1,6 +1,7 @@
 export enum ROUTES {
     SIGNIN = "SIGNIN",
     SIGNUP = "SIGNUP",
+    MARKET_LIST = "MARKET_LIST"
 } 
 
 export enum PRESENTATION_ROUTES {
