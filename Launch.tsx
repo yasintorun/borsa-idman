@@ -19,7 +19,6 @@ const Launch = () => {
             })
         ]
         Promise.all(promises).finally(() => {
-            // console.log(" asdlö aslşd asşld jsad jmaslkd masklş dmasmd ")
             setLoading(false)
         })
     }, [])

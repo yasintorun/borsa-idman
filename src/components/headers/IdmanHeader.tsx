@@ -25,7 +25,6 @@ text-align: center;
 color: ${COLORS.opacity900}
 `
 export const IdmanHeader = (props: DrawerHeaderProps) => {
-  console.log(props.route)
 
   if([DRAWER_ROUTES.LANDING, DRAWER_ROUTES.AUTH].some(x => x.includes(props.route.name))) return <></>
   return (
