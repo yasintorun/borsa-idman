@@ -2,11 +2,12 @@ import { StyleSheet, Text, View, TextInput } from 'react-native'
 import React from 'react'
 import { IdmanLogo } from '@components'
 import styled from 'styled-components/native'
-import { ScreenProps } from 'src/types'
-import { COLORS, fontFamilies, fonts, ROUTES } from '@utils'
+import { ImNavigationDrawerProp, ScreenProps } from 'src/types'
+import { COLORS, DRAWER_ROUTES, fontFamilies, fonts, ROUTES } from '@utils'
 import { IdmanButton, Input } from '@components/UI'
 import { Pressable } from 'react-native'
 import { TouchableOpacity } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
 const StyledRoot = styled.ScrollView`
   flex: 1;
@@ -61,6 +62,7 @@ const StyledTitle = styled.Text`
 
 export const SigninScreen = (props: ScreenProps<ROUTES.SIGNIN>) => {
     const { navigation } = props
+    const drawerNavigation = useNavigation<ImNavigationDrawerProp>()
     return (
         <StyledRoot>
             <IdmanLogo />
@@ -74,7 +76,7 @@ export const SigninScreen = (props: ScreenProps<ROUTES.SIGNIN>) => {
                             <StyledForgottonPwdText>Şifremi Unuttum</StyledForgottonPwdText>
                         </TouchableOpacity>
                     </StyledRightAligment>
-                    <IdmanButton text='Giriş Yap' />
+                    <IdmanButton text='Giriş Yap' onPress={() => drawerNavigation.getParent("drawer")?.navigate(DRAWER_ROUTES.MAIN)} />
                     <StyledNotAccount>
                         <StyledMutedText>
                             Hesabın yok mu?

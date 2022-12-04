@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import styled from 'styled-components/native'
 import { Icon } from '../UI/Icon'
-import { COLORS, fonts } from '@utils'
+import { COLORS, DRAWER_ROUTES, fonts } from '@utils'
 import { useNavigation } from '@react-navigation/native'
 import { ImNavigationDrawerProp } from 'src/types'
 import { DrawerHeaderProps, DrawerNavigationProp } from '@react-navigation/drawer'
@@ -25,6 +25,9 @@ text-align: center;
 color: ${COLORS.opacity900}
 `
 export const IdmanHeader = (props: DrawerHeaderProps) => {
+  console.log(props.route)
+
+  if([DRAWER_ROUTES.LANDING, DRAWER_ROUTES.AUTH].some(x => x.includes(props.route.name))) return <></>
   return (
     <StyledRoot>
       <Icon family='MaterialCommunity' name='menu' size={32} color={COLORS.opacity900} onPress={() => props.navigation.openDrawer()}/>

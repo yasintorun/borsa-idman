@@ -3,6 +3,7 @@ import { RootState } from '@store';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import HomeNavigator from './HomeNavigator';
+import PresentationNavigator from './PresentationNavigator';
 
 const navigatorTheme = {
     ...DefaultTheme,
@@ -17,10 +18,10 @@ export const AppNavigator = (): React.ReactElement => {
 
     return (
         <NavigationContainer theme={navigatorTheme}>
+            {/* <PresentationNavigator /> */}
             {/* {isPresentationDone ? (
                 <AuthNavigator />
             ) : (
-                <PresentationNavigator />
             )} */}
             {/* <PresentationNavigator /> */}
             <HomeNavigator />

@@ -16,6 +16,11 @@ export enum TAB_ROUTES {
     MARKET = "MARKET"
 }
 
+export enum DRAWER_ROUTES {
+    LANDING = "LANDING",
+    MAIN = "MAIN",
+    AUTH = "AUTH",
+}
 
 export enum STORAGE_KEYS {
     DONE_PRESENTATION = "DONE_PRESENTATION"

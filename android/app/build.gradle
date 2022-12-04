@@ -212,6 +212,12 @@ android {
         }
     }
     signingConfigs {
+        release {
+            storeFile file('idman_release.keystore')
+            storePassword 'idman1'
+            keyAlias 'idman_key'
+            keyPassword 'idman1'
+        }
         debug {
             storeFile file('debug.keystore')
             storePassword 'android'

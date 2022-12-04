@@ -1,12 +1,13 @@
 import { IdmanLogo } from '@components'
 import { IdmanButton } from '@components/UI'
+import { useNavigation } from '@react-navigation/native'
 import { donePresentation } from '@store'
-import { PRESENTATION_ROUTES } from '@utils'
+import { DRAWER_ROUTES, PRESENTATION_ROUTES, ROUTES } from '@utils'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import Animated from 'react-native-reanimated'
 import { useDispatch } from 'react-redux'
-import { ScreenProps } from 'src/types'
+import { ImNavigationDrawerProp, ScreenProps } from 'src/types'
 import styled from 'styled-components/native'
 
 const StyledRoot = styled.View`
@@ -18,8 +19,10 @@ const StyledRoot = styled.View`
 
 export const Presentation2Screen = (props: ScreenProps<PRESENTATION_ROUTES.PRESENTATION2>) => {
     const dispatch = useDispatch()
+    const navigation = useNavigation<ImNavigationDrawerProp>()
     const handleSignin = async () => {
         dispatch(donePresentation(true))
+        navigation.getParent("drawer")?.navigate(DRAWER_ROUTES.AUTH)
     }
 
     return (
